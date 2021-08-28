@@ -1,0 +1,54 @@
+{%extends 'header.html'%}
+
+{% block page %}
+<head>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+      <div class="row">
+          <div class="col col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 col-xxl-2"></div>
+          <div class="col col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 col-xxl-2"></div>
+         
+ <form action=" " method="post">
+    <table class="table table-borderless">
+        <tr>   
+            <td>User Name</td>
+              <td><input name=" " type="text" class="form-control" placeholder="Your registered email id"></td>
+          </tr>
+          <tr>   
+            <td>Password</td>
+              <td><input name="" type="password" class="form-control" placeholder=" Type your password"></td>
+          </tr>
+          <!-- <tr>
+            <td></td>
+            <td><button class="btn btn-danger" >Login </button></td>
+        </tr> -->
+        <tr>
+          <td></td>
+          <td>
+            <li class="nav-item">
+              <selection class="form-control">
+                  <a class="nav-link" style = "color:rgb(247, 245, 245); background-color: darkred; text-align:center;" href="http://127.0.0.1:8000/asm/user/">Login</a>
+              </selection>
+          </td>
+        </tr>
+        
+    
+    </li>
+        <tr>
+            <td></td>
+            <td> <li class="nav-item">
+                <a class="nav-link" href="">Forget Password</a>
+              </li>
+            </td>
+        </tr>
+
+    </table>
+</div>
+  </form>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+ </body> 
+
+ {% endblock %}

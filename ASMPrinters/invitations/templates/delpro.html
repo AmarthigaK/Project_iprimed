@@ -1,0 +1,71 @@
+{%extends 'header.html'%}
+
+{% block page %}
+
+<div class="container">
+    <div class="row">
+        <div class="col col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 col-xxl-2"></div>
+            <div class="col col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 col-xxl-2"></div>
+            
+            <form action="http://127.0.0.1:8000/asm/del/" method="post">
+                <table class="table table-borderless">
+                    <tr>
+                        <td>Mobile No</td>
+                        <td><input name= "phone" type="text" class="form-control" placeholder="Enter mobile no"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><button type ="submit" class="btn btn-success">Get Profile Information</button></td>
+                    </tr>
+    
+                </table>
+                </form>
+{% if data %}
+    <form action="http://127.0.0.1:8000/asm/deleteact/" method="post">
+                
+        <table class="table table-borderless">
+{% for n in data %}
+
+<tr>
+    <td style = "color:rgb(128, 2, 2);"><b>Customer Name</b></td>
+    <td><input readonly name = 'newName' value ='{{n.name}}' type="text" class="form-control"> </td>
+</tr>
+<tr>
+    <td style = "color:rgb(128, 2, 2);"><b>Address</b></td>
+    <td><input name = 'newAdd' value ='{{n.add}}' type="text" class="form-control"></td>
+</tr>
+<tr>
+    <td style = "color:rgb(128, 2, 2);"><b>Email ID</b></td>
+    <td><input readonly name = 'newEmail' value ='{{n.email}}' type="text" class="form-control"></td>
+</tr>
+<tr>
+    <td style = "color:rgb(128, 2, 2);"><b>Phone No</b></td>
+    <td><input readonly name = 'newPhone' value ='{{n.phone}}' type="text" class="form-control"></td>
+</tr>
+<tr>
+    <td style = "color:rgb(128, 2, 2);"><b>Password</b></td>
+    <td><input readonly name = 'newPass' value ='{{n.password}}' type="text" class="form-control"></td>
+</tr>
+<tr>
+    <td style = "color:rgb(128, 2, 2);"><b>Confirm Password</b></td>
+    <td><input readonly name = 'newCpass' value ='{{n.cnfrmpass}}' type="text" class="form-control"></td>
+</tr>
+<tr>
+    <td></td>
+    <td><button  type ="submit" class="btn btn-success">Delete Profile </button></td>
+</tr>
+
+{% endfor %}
+
+ </table>
+
+
+</form>
+{% endif %}               
+
+                
+</div> 
+                    
+</div>
+                   
+{%endblock%}
